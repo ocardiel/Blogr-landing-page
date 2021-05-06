@@ -1,0 +1,110 @@
+.hero{
+    //TODO: Pasar a rem, quitar el important del boton, Next: Menus.   
+
+    background-image: url('/images/bg-pattern-intro.svg'),linear-gradient(to right,$veryLightRedGradient,$lightRedGradient);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size:300%; 
+    background-position: 36% 33%;
+    padding-left: 20px;
+    padding-right: 50px;    
+    padding-top:50px;
+
+    @include breakpoint-up(large){
+        padding-left: 165px;
+        padding-right: 165px;
+        padding-top:62px;
+        background-position: 22% 52.5%;
+        background-size:auto; 
+    }
+    
+
+    border-radius: 0px 0px 0px 90px;
+    min-height: 600px;
+
+    &__nav{
+        position:relative;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        @include breakpoint-up(large){
+            
+            flex-wrap:nowrap;            
+        }
+        
+        font-family:'Ubuntu';
+        font-weight: 700;       
+        margin-bottom: 90px;       
+        
+        a{            
+            color:$white;
+        }
+    }
+
+    &__menu{
+        @include breakpoint-up(large){
+            flex:1;
+        }        
+      
+        padding-left: 66px;
+        a{
+            &:not(:last-child){
+                margin-right:32px;
+            }
+        }
+       
+    }
+
+    &__access{  
+            display: inline-block; 
+               
+            a{
+                &:not(:last-child){
+                    margin-right:32px;
+            }
+        }
+    }
+
+    &__logo{
+        
+    
+    }
+    
+    &__hamburger{
+        
+        
+        
+    }
+
+    &__content{
+
+        h1{
+            color:$white;        
+            font-weight: 300;
+            font-size:22px;            
+            word-wrap: break-word;
+            text-align: center;
+            margin-bottom:45px;
+            @include breakpoint-up(large){
+                font-size:50px;
+            }
+        }
+    }
+
+
+    &__subtitle{
+        color: $white;
+        font-size:20px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__cta{
+        text-align: center;
+         a{
+                &:not(:last-child){
+                    margin-right:32px;
+                }
+        }
+    }
+}

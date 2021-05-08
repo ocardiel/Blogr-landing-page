@@ -157,6 +157,10 @@ button--menu:hover, .button--menu:hover {
   margin-right: 32px;
 }
 
+.hero__hamburger--close {
+  display: none;
+}
+
 .hero__window {
   position: absolute;
   width: calc(100% - 3rem);
@@ -170,6 +174,7 @@ button--menu:hover, .button--menu:hover {
   -webkit-box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
   z-index: 1;
+  display: none;
 }
 
 .hero__window a {
@@ -179,9 +184,19 @@ button--menu:hover, .button--menu:hover {
   text-align: center;
 }
 
+.hero__window a .clicked {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .hero__submenu {
   background-color: #c8c8cb;
   border-radius: 8px;
+  display: none;
+}
+
+.hero .open {
+  display: inherit;
 }
 
 .hero__separation {

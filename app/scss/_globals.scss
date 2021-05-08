@@ -52,6 +52,17 @@ button, .button{
             }        
         }
 
+        &--menu{
+            color: $white !important;
+            background: linear-gradient(to right,$veryLightRedGradient,$lightRedGradient) !important; //Corregir
+            width: 50%;
+            margin: 0 auto;
+            &:hover{
+                 background: $veryLightRed;
+                 color: $white !important;
+            }        
+        }
+
         
 }
 

@@ -1,13 +1,13 @@
 .hero{
     //TODO: Pasar a rem, quitar el important del boton, Next: Menus.   
-
+    position: relative;
     background-image: url('/images/bg-pattern-intro.svg'),linear-gradient(to right,$veryLightRedGradient,$lightRedGradient);
     background-position: center; 
     background-repeat: no-repeat; 
     background-size:300%; 
     background-position: 36% 33%;
     padding-left: 20px;
-    padding-right: 50px;    
+    padding-right: 20px;    
     padding-top:50px;
 
     @include breakpoint-up(large){
@@ -34,7 +34,7 @@
         
         font-family:'Ubuntu';
         font-weight: 700;       
-        margin-bottom: 90px;       
+              
         
         a{            
             color:$white;
@@ -76,17 +76,59 @@
         
     }
 
+    &__window{
+        position:absolute; //Hace que este por encima de lo demas
+        width: calc(100% - 3rem); //Permite que crezca con el tamaño de la pantalla
+        left:50%; //Junto con la de abajo permite centrarlo
+        transform:translateX(-50%);
+        background: $white;
+        margin-top:1.5rem;        
+        padding: 1.625rem;
+        border-radius:8px;
+        box-shadow: 0px 3px 12px rgba(0,0,0,0.15);
+        z-index:1;
+        a { //links del menú
+            display: block;
+            color: $veryDarkBlue;
+            padding: 0.625rem;
+            text-align: center;
+        }
+        
+    }
+
+    &__submenu{
+            background-color: $grayish;
+            border-radius:8px;
+    }
+
+    &__separation
+    {
+        margin-top:25px;
+
+        &::after
+        {
+            content: "";
+            height: 1px;
+            width: 100%;
+            border: 1px solid $grayish;
+            display: block;
+        }
+    }
+
     &__content{
 
+        padding-left:10px;
+        margin-top: 90px; 
         h1{
             color:$white;        
             font-weight: 300;
-            font-size:22px;            
+            font-size:36px;            
             word-wrap: break-word;
             text-align: center;
-            margin-bottom:45px;
+            margin-bottom:30px;
             @include breakpoint-up(large){
                 font-size:50px;
+                margin-bottom:45px;
             }
         }
     }
@@ -103,8 +145,15 @@
         text-align: center;
          a{
                 &:not(:last-child){
+                    margin-right:12px;
+                
+                
+                @include breakpoint-up(large){
+                    
                     margin-right:32px;
+                    
                 }
+            }
         }
     }
 }

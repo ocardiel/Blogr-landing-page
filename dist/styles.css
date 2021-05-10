@@ -55,6 +55,7 @@ button--primary, .button--primary {
 button--primary:hover, .button--primary:hover {
   background: #ff7a85;
   color: white !important;
+  border-color: #ff7a85;
 }
 
 button--menu, .button--menu {
@@ -68,6 +69,7 @@ button--menu, .button--menu {
 button--menu:hover, .button--menu:hover {
   background: #ff7a85;
   color: white !important;
+  border: #ff7a85;
 }
 
 @media (max-width: 63.9375em) {
@@ -94,16 +96,17 @@ button--menu:hover, .button--menu:hover {
   padding-right: 20px;
   padding-top: 50px;
   border-radius: 0px 0px 0px 90px;
-  min-height: 600px;
+  min-height: 524px;
 }
 
 @media (min-width: 64em) {
   .hero {
+    min-height: 600px;
+    background-position: 22% 52.5%;
+    background-size: auto;
     padding-left: 165px;
     padding-right: 165px;
     padding-top: 62px;
-    background-position: 22% 52.5%;
-    background-size: auto;
   }
 }
 
@@ -157,6 +160,11 @@ button--menu:hover, .button--menu:hover {
   margin-right: 32px;
 }
 
+.hero__hamburger {
+  -webkit-transition: display 1000ms ease-in-out;
+  transition: display 1000ms ease-in-out;
+}
+
 .hero__hamburger--close {
   display: none;
 }
@@ -182,6 +190,8 @@ button--menu:hover, .button--menu:hover {
   color: #1f3f5b;
   padding: 0.625rem;
   text-align: center;
+  -webkit-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 
 .hero__window a .clicked {
@@ -193,6 +203,8 @@ button--menu:hover, .button--menu:hover {
   background-color: #c8c8cb;
   border-radius: 8px;
   display: none;
+  -webkit-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 
 .hero .open {
@@ -200,15 +212,16 @@ button--menu:hover, .button--menu:hover {
 }
 
 .hero__separation {
-  margin-top: 25px;
+  margin-top: 45px;
+  margin-bottom: 50px;
 }
 
 .hero__separation::after {
   content: "";
-  height: 1px;
   width: 100%;
   border: 1px solid #c8c8cb;
   display: block;
+  margin-bottom: 5px;
 }
 
 .hero__content {
@@ -251,5 +264,28 @@ button--menu:hover, .button--menu:hover {
   .hero__cta a:not(:last-child) {
     margin-right: 32px;
   }
+}
+
+.features {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.features h2 {
+  color: #1f3f5b;
+  font-size: 35px;
+  font-weight: 400;
+  padding: 45px;
+}
+
+.features img {
+  max-width: 100%;
+}
+
+.features p {
+  padding: 35px;
+  font-size: 21px;
+  line-height: 1.9;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -49,6 +49,7 @@ button, .button{
             &:hover{
                  background: $veryLightRed;
                  color: $white !important;
+                 border-color: $veryLightRed;
             }        
         }
 
@@ -60,6 +61,7 @@ button, .button{
             &:hover{
                  background: $veryLightRed;
                  color: $white !important;
+                 border: $veryLightRed;
             }        
         }
 
@@ -75,6 +77,6 @@ button, .button{
 
 .hide-for-desktop{
 @include breakpoint-up(large){
-    display:none !important;
+      display:none !important;
   }
 }

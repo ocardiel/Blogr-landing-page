@@ -148,6 +148,10 @@ button--menu:hover, .button--menu:hover {
   }
 }
 
+.hero__menu a {
+  display: inline-block;
+}
+
 .hero__menu a:not(:last-child) {
   margin-right: 32px;
 }

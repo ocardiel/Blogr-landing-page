@@ -51,10 +51,13 @@
     &__menu{
         @include breakpoint-up(large){
             flex:1;
+            
         }        
       
         padding-left: 66px;
+
         a{
+            display:inline-block;
             &:not(:last-child){
                 margin-right:32px;
             }
